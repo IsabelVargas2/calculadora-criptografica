@@ -311,4 +311,4 @@ elif submenu.startswith("6.3"):
         mostrar(r)
 
 st.divider()
-st.caption("Taller de Ciberseguridad · Calculadora Criptográfica · Ejecutar con: streamlit run calculadora_criptografica.py")
+st.caption("Taller de Ciberseguridad · Calculadora Criptográfica")
