@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 🔗 APP (Streamlit Cloud):
 https://calculadora-criptografica-n9eucrfmexylsbhmq2e8sr.streamlit.app
 
