@@ -1,5 +1,6 @@
 CALCULADORA CRIPTOGRÁFICA - Taller de Ciberseguridad
 =====================================================
+
 🔗 APP (Streamlit Cloud):
 https://calculadora-criptografica-n9eucrfmexylsbhmq2e8sr.streamlit.app
 
@@ -10,8 +11,7 @@ espera 30-60 segundos y se activa sola — no está rota, solo estaba en reposo.
 ESTRUCTURA DEL REPOSITORIO:
 calculadora-criptografica/
 ├── app/
-│   ├── calculadora_criptografica.py   -> interfaz Streamlit (los 6 menús y submenús)
-│   └── crypto_logic.py                -> toda la lógica matemática/criptográfica
+│   └── calculadora_criptografica.py   -> script único: interfaz Streamlit + toda la lógica
 ├── docs/
 │   ├── Calculadora_Criptografica_Ejemplos.pdf -> un ejemplo resuelto de cada submenú, en tablas
 │   └── generar_pdf_ejemplos.py        -> script que generó el PDF de ejemplos
@@ -21,23 +21,10 @@ CÓMO USAR LA APP:
 En la barra lateral se elige el menú principal (1-6) y luego el submenú;
 se llenan los campos y se presiona "Calcular". Los resultados y la tabla
 de pasos aparecen debajo.
-=======
-ARCHIVOS:
-- calculadora_criptografica.py -> interfaz Streamlit (los 6 menús y submenús)
-- crypto_logic.py               -> toda la lógica matemática/criptográfica (probada por separado)
-- generar_pdf_ejemplos.py       -> script que generó el PDF de ejemplos
-- Calculadora_Criptografica_Ejemplos.pdf -> un ejemplo resuelto de cada submenú, en tablas
 
-CÓMO EJECUTARLA:
-1) Instalar dependencias (una sola vez):
+CÓMO CORRERLA EN LOCAL (opcional, además del link de arriba):
    pip install streamlit pandas
-
-2) Ejecutar:
-   streamlit run calculadora_criptografica.py
-
-3) Se abre en el navegador (http://localhost:8501). En la barra lateral se elige
-   el menú principal (1-6) y luego el submenú; se llenan los campos y se
-   presiona "Calcular". Los resultados y la tabla de pasos aparecen debajo.
+   streamlit run app/calculadora_criptografica.py
 
 NOTAS DE CONTENIDO:
 - 1.6 (AEE) muestra el número de rondas y la tabla completa (q, r, s, t) en
