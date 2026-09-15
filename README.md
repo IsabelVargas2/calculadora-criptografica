@@ -1,37 +1,73 @@
-CALCULADORA CRIPTOGRÁFICA - Taller de Ciberseguridad
+# Calculadora Criptográfica
 
+Aplicación web desarrollada en Python con Streamlit que implementa operaciones
+de matemática modular, criptografía clásica y moderna, algoritmos hash,
+codificación y uso de SALT — desarrollada como taller de la asignatura de
+Ciberseguridad, Ingeniería de Sistemas, UNAB.
 
-ARCHIVOS:
-- calculadora_criptografica.py -> interfaz Streamlit (los 6 menús y submenús)
-- crypto_logic.py               -> toda la lógica matemática/criptográfica (probada por separado)
-- generar_pdf_ejemplos.py       -> script que generó el PDF de ejemplos
-- Calculadora_Criptografica_Ejemplos.pdf -> un ejemplo resuelto de cada submenú, en tablas
+## Demo en vivo
 
-CÓMO EJECUTARLA:
-1) Instalar dependencias (una sola vez):
-   pip install streamlit pandas
+**[calculadora-criptografica-n9eucrfmexylsbhmq2e8sr.streamlit.app](https://calculadora-criptografica-n9eucrfmexylsbhmq2e8sr.streamlit.app)**
 
-2) Ejecutar:
-   streamlit run calculadora_criptografica.py
+> Nota: Streamlit Community Cloud pone la aplicación en reposo tras un
+> periodo de inactividad. Si al ingresar aparece un mensaje de "waking up",
+> espera unos segundos mientras se reactiva.
 
-3) Se abre en el navegador (http://localhost:8501). En la barra lateral se elige
-   el menú principal (1-6) y luego el submenú; se llenan los campos y se
-   presiona "Calcular". Los resultados y la tabla de pasos aparecen debajo.
+## Funcionalidades
 
-PENDIENTE POR HACER TÚ (no se puede generar desde aquí):
-- Pantallazo de un ejemplo funcionando: corre la app localmente (o en Streamlit
-  Cloud, como hiciste con tus otros proyectos) y toma una captura de cualquier
-  submenú con un resultado calculado.
-- Video de 10 minutos explicando el funcionamiento y cómo se hizo: grábalo
-  mostrando la app en vivo (un par de submenús de cada categoría) y comentando
-  brevemente crypto_logic.py (una función por categoría basta, no hace falta
-  leer todo el código).
-- Si el profesor pide notebook de Jupyter en vez de .py: las funciones de
-  crypto_logic.py se pueden importar tal cual en un notebook (import crypto_logic
-  as cl) y llamarlas en celdas separadas por submenú.
+**1. Operaciones matemáticas modulares**
+Módulo, inverso aditivo, inverso de XOR, máximo común divisor (Algoritmo de
+Euclides) e inverso multiplicativo (método tradicional y Algoritmo Extendido
+de Euclides, con tabla de rondas).
 
-NOTAS DE CONTENIDO:
-- 1.6 (AEE) muestra el número de rondas y la tabla completa (q, r, s, t) en
-  cada iteración, tal como pidió el profesor.
-- 1.4 y 1.6 indican explícitamente si existe o no el inverso multiplicativo.
-- Todos los resultados se presentan en tabla, como se solicitó.
+**2. Criptografía clásica**
+Cifrado módulo 27, César, Vernam, Atbash, transposición columnar simple,
+cifrado afín y sustitución simple.
+
+**3. Criptografía moderna**
+Intercambio de claves Diffie-Hellman, cifrado y descifrado RSA, y algoritmo
+de exponenciación rápida (cuadrado y multiplicación).
+
+**4. Algoritmos hash**
+MD5, SHA-256 y SHA-512.
+
+**5. Codificación**
+Conversión entre texto, ASCII, hexadecimal, binario y Base64.
+
+**6. Uso de SALT**
+Generación de hashes con distintos valores de SALT sobre una misma clave,
+para ilustrar su efecto en la seguridad del hash resultante.
+
+Cada operación muestra el resultado junto con una tabla del procedimiento
+paso a paso.
+
+## Estructura del proyecto
+
+```
+calculadora-criptografica/
+├── app/
+│   └── calculadora_criptografica.py   # Aplicación (lógica + interfaz Streamlit)
+├── docs/
+│   ├── Calculadora_Criptografica_Ejemplos.pdf   # Ejemplo resuelto por cada submenú
+│   └── generar_pdf_ejemplos.py                  # Script generador del PDF
+└── README.md
+```
+
+## Tecnologías
+
+- Python 3
+- Streamlit
+- Pandas
+
+## Ejecución local
+
+```bash
+pip install streamlit pandas
+streamlit run app/calculadora_criptografica.py
+```
+
+La aplicación se abre automáticamente en `http://localhost:8501`.
+
+## Autora
+
+María Isabel Vargas Mendoza — Ingeniería de Sistemas, UNAB
